@@ -33,6 +33,15 @@ class Rectangle(Polygon):
 		w, h = self.sides
 		Polygon.area = w * h
 
+class Triangle(Polygon):
+	'Triangle Parent'
+	
+	def __init__(self):
+		Polygon.__init__(self, 2)	
+
+	def findArea(self):
+		b, h = self.sides
+		Polygon.area = (b * h) * 0.5
 
 
 # Find The Square Area
@@ -49,3 +58,10 @@ r.inputSides();
 r.findArea();
 r.printArea('Rectangle');
 print(issubclass(Polygon, Rectangle))
+
+# Find The Rectangle Area
+t = Triangle();
+t.inputSides();
+t.findArea();
+t.printArea('Triangle');
+print(issubclass(Polygon, Triangle))
