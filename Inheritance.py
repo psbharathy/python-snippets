@@ -40,9 +40,12 @@ s = Square()
 s.inputSides()
 s.findArea()
 s.printArea('Square')
+print(isinstance(s, Square))
+print(isinstance(s, Rectangle))
 
 # Find The Rectangle Area
 r = Rectangle();
 r.inputSides();
 r.findArea();
 r.printArea('Rectangle');
+print(issubclass(Polygon, Rectangle))
